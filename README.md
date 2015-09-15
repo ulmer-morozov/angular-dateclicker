@@ -4,7 +4,7 @@ Ordinary input date completes in four clicks.
 
 #How to use
 
-Link dateclicker to your app^
+Link dateclicker to your app
 `angular.module('app', ['dateclicker'])`
 
 Use in code:
