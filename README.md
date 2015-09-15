@@ -7,5 +7,8 @@ Ordinary input date completes in four clicks.
 Link dateclicker to your app
 `angular.module('app', ['dateclicker'])`
 
-Use in code:
+Change path to datepicker template in datecliker.js
+`templateUrl: "YOUT_ANGULAR_TEMPLATES_FOLDER/dateclicker.html"`
+
+In html:
 `<dateclicker ng-model="persona.dateOfBirth" required name="dateOfBirth"></dateclicker>`
