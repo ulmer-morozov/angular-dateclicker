@@ -10,5 +10,5 @@ Link dateclicker to your app
 Change path to datepicker template in datecliker.js
 `templateUrl: "YOUT_ANGULAR_TEMPLATES_FOLDER/dateclicker.html"`
 
-In html:
+use it in html:
 `<dateclicker ng-model="persona.dateOfBirth" required name="dateOfBirth"></dateclicker>`
