@@ -1,0 +1,69 @@
+﻿<div class="dateclickerLayout">
+    <div class="display">
+        <span ng-show="day && !yearOnly">{{day}} </span>
+        <span ng-show="month!=undeffined && !yearOnly">
+            <span ng-show="month==0">Января</span>
+            <span ng-show="month==1">Февраля</span>
+            <span ng-show="month==2">Марта</span>
+            <span ng-show="month==3">Апреля</span>
+            <span ng-show="month==4">Мая</span>
+            <span ng-show="month==5">Июня</span>
+            <span ng-show="month==6">Июля</span>
+            <span ng-show="month==7">Августа</span>
+            <span ng-show="month==8">Сентября</span>
+            <span ng-show="month==9">Октября</span>
+            <span ng-show="month==10">Ноября</span>
+            <span ng-show="month==11">Декабря</span>
+        </span>
+        <span ng-show="year && !yearOnly">{{year}} года</span>
+        <span ng-show="year && yearOnly">{{year}} год</span>
+        <span ng-hide="day && month!=undeffined && year">...</span>
+    </div>
+    <div class="days" ng-show="showDays">
+        <h4>Выберите день</h4>
+        <a ng-repeat="n in [] | range:31" ng-click="setDay($index+1)" class="day">{{$index+1}}</a>
+    </div>
+    <div class="months" ng-show="showMonths">
+        <h4>Выберите месяц</h4>
+        <a ng-click="setMonth(0)" class="month">Январь</a>
+        <a ng-click="setMonth(1)" class="month">Февраль</a>
+        <a ng-click="setMonth(2)" class="month">Март</a>
+        <a ng-click="setMonth(3)" class="month">Апрель</a>
+        <a ng-click="setMonth(4)" class="month">Май</a>
+        <a ng-click="setMonth(5)" class="month">Июнь</a>
+        <a ng-click="setMonth(6)" class="month">Июль</a>
+        <a ng-click="setMonth(7)" class="month">Август</a>
+        <a ng-click="setMonth(8)" class="month">Сентябрь</a>
+        <a ng-click="setMonth(9)" class="month">Октябрь</a>
+        <a ng-click="setMonth(10)" class="month">Ноябрь</a>
+        <a ng-click="setMonth(11)" class="month">Декабрь</a>
+        <div class="dateclickerControls">
+            <a ng-click="gotoDaySelector()" class="pointer btn btn-default">Выбрать другое число</a>
+        </div>
+    </div>
+    <div class="generations" ng-show="showGenerations">
+        <h4>Выберите поколение</h4>
+        <div ng-repeat="generation in allGenerations" class="generation">
+            <a ng-click="setGeneration(generation)">{{generation.start}} - {{generation.end}}</a>
+        </div>
+        <div class="dateclickerControls">
+            <a ng-click="gotoMonthSelector()" class="pointer btn btn-default">Выбрать другой месяц</a>
+            <a ng-click="gotoDaySelector()" class="pointer btn btn-default">Заново</a>
+        </div>
+    </div>
+    <div class="years" ng-show="showYears">
+        <h4>Выберите год</h4>
+        <div ng-repeat="year in allYears" class="year">
+            <a ng-click="setYear(year)">{{year}}</a>
+        </div>
+        <div class="dateclickerControls">
+            <a ng-click="gotoGenerationSelector()" class="pointer btn btn-default">Выбрать другое поколение</a>
+            <a ng-click="gotoDaySelector()" class="pointer btn btn-default">Заново</a>
+        </div>
+    </div>
+    <div ng-show="showComplete">
+        <div class="dateclickerControls">
+            <a ng-click="gotoDaySelector()" class="pointer btn btn-default">Выбрать заново</a>
+        </div>
+    </div>
+</div>

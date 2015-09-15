@@ -1,0 +1,63 @@
+﻿.dateclickerLayout {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+    .dateclickerLayout .days {
+        width: 300px;
+    }
+
+        .dateclickerLayout .days a.day {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            /*background-color: whitesmoke;*/
+            margin-bottom: 2px;
+            padding-top: 9px;
+            font-size: 16px;
+            border: 1px solid transparent;
+        }
+
+            .dateclickerLayout .days a.day:hover {
+                /*background-color: #fcfcfc;*/
+                /*color: white;*/
+                text-decoration: none;
+                border: 1px solid silver;
+                border-radius: 4px;
+            }
+
+    .dateclickerLayout .months .month {
+        display: block;
+        font-size: 16px;
+        cursor: pointer;
+        margin-bottom: 6px;
+    }
+
+
+    .dateclickerLayout .generations .generation {
+        margin-bottom: 6px;
+    }
+
+        .dateclickerLayout .generations .generation a {
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+    .dateclickerLayout .years .year {
+        margin-bottom: 6px;
+    }
+
+        .dateclickerLayout .years .year a {
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+
+    .dateclickerLayout .dateclickerControls {
+        margin-top: 10px;
+    }
+
+    .dateclickerLayout .display {
+    }
